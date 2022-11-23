@@ -1,0 +1,24 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        //definition the variable with float
+        float vat = 19f;
+        float productA = 3.99f;
+        float productB = 11.99f;
+        float productC = 5.75f;
+
+        //make a variable to count productA - C to see a result from it
+        float sum = productA + productB + productC;
+
+        //take a total result from productA - C then divided by 100 and then multiply tax
+        //by variable vat (vat is required)
+        float totalTax = (sum / 100) * vat;
+        sum += totalTax;
+
+        //print total from sum + total tax
+        Console.WriteLine(sum);
+    }
+}

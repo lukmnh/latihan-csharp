@@ -1,0 +1,27 @@
+using System;
+
+namespace HelloWord
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            writeSomething();
+            somethingSpecific("i am an argument and am called from a method");
+            Console.Read();
+        }
+
+        // access modifier (static) return type method name (param1, param2)
+        public static void writeSomething()
+        {
+            Console.WriteLine("i am called from a method");
+        }
+
+        public static void somethingSpecific(string myText)
+        {
+            Console.WriteLine(myText);
+        }
+    }
+}
+

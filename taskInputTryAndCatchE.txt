@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a first number!");
+            string userInput = Console.ReadLine();
+            Console.WriteLine("Please enter a second number!");
+            string user2Input = Console.ReadLine();
+
+            try
+            {
+                int userInputAsInt = int.Parse(userInput);
+                int user2InputAsInt = int.Parse(user2Input);
+
+                Console.WriteLine(userInputAsInt / user2InputAsInt);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Division of {0} by zero");
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //declaration the variable
+            int lenghtOfText = 0;
+            string wholeText = "";
+
+            //looping do while
+            do
+            {
+                Console.WriteLine("please enter the name");
+                string nameOfAFriend = Console.ReadLine(); //<- input the name of your friend
+                int currentLenght = nameOfAFriend.Length; //panjang dari nama yang di input akan looping sampai batas while
+                lenghtOfText += currentLenght; //jumlah text yang di input akan di tambah dari jumlah yang akan di input sampai batas while
+                wholeText += nameOfAFriend; //friend name that inputed by user
+
+            } while (lenghtOfText < 10);
+            Console.WriteLine("Thanks, thats enough!" + wholeText);
+            Console.Read();
+        }
+    }
+}

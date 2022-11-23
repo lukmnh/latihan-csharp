@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your score and get your grade");
+            string myScore = Console.ReadLine();
+
+            int newMyScore = int.Parse(myScore);
+
+            if (newMyScore >= 90)
+            {
+                Console.WriteLine("You got an A score");
+            }
+            else if (newMyScore >= 75)
+            {
+                Console.WriteLine("You got a B score");
+            }
+            else if (newMyScore >= 60)
+            {
+                Console.WriteLine("You got a C score");
+            }
+            else if (newMyScore >= 40)
+            {
+                Console.WriteLine("You got a D score");
+            }
+            else
+            {
+                Console.WriteLine("You failed, you got F!!!");
+            }
+
+
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //input the temperature
+            Console.WriteLine("enter the temperature ");
+            string inputTemperature = Console.ReadLine();
+            //change string to int
+            int newInt;
+            int newNum;
+            bool userEnteredANumber = int.TryParse(inputTemperature, out newNum);
+
+            //can use in if condition or use boolean like above statement
+            //if(int.TryParse(inputTemperature, out newNum))
+            if (userEnteredANumber)
+            {
+                newInt = newNum;
+            }
+            else
+            {
+                newInt = 0;
+                Console.WriteLine("Value was entered but not number. 0 set as temperature");
+            }
+
+            //kondisi if
+            if (newInt < 20)
+            {
+                Console.WriteLine("Take the coat");
+            }
+            else if (newInt == 20)
+            {
+                Console.WriteLine("its 20 celcius, its fine");
+            }
+            else if (newInt <= 30)
+            {
+                Console.WriteLine("its warm");
+            }
+            else
+            {
+                Console.WriteLine("its HOTTT?");
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}

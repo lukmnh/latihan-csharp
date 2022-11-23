@@ -1,0 +1,43 @@
+using System;
+
+namespace HelloWord
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            //declare result to assign method Tammbah
+            //int result = Tambah(5, 6)
+
+            //calling method as argument
+            Console.WriteLine("Pertambahan dari method Tambah");
+            Console.WriteLine(Tambah(5, 6));
+            Console.WriteLine("Perkalian dari method Kali");
+            Console.WriteLine(Kali(5, 6));
+            Console.WriteLine("Pembagian dari method Bagi");
+            Console.WriteLine(Bagi(30, 7));
+            Console.Read();
+        }
+
+        // access modifier (static) return type method name (param1, param2)
+        //method tambah
+        public static int Tambah(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+
+        //method kali
+        public static int Kali(int num1, int num2)
+        {
+            return num1 * num2;
+        }
+
+        //method bagi using double
+        public static double Bagi(double num1, double num2)
+        {
+            return num1 / num2;
+        }
+    }
+}
+

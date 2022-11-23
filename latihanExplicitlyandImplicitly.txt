@@ -1,0 +1,19 @@
+using System;
+
+public class HelloWorld
+{
+
+    //primitive data type
+    // Explicitly type
+    float price = 3.99f;
+    string name = "Lukman";
+    char letter = 'a';
+    int number = 100000;
+    bool toggle = true;
+    public static void Main(string[] args) // <- method
+    {
+        // Implicitly
+        var username = "My username is";
+    }
+
+}

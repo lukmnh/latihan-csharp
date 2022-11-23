@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //input the temperature
+            Console.WriteLine("enter the temperature ");
+            string inputTemperature = Console.ReadLine();
+            //change string to int
+            int newInt = int.Parse(inputTemperature);
+
+
+            //kondisi if
+            if (newInt < 20)
+            {
+                Console.WriteLine("Take the coat");
+            }
+            if (newInt == 20)
+            {
+                Console.WriteLine("its Fine, you can chill");
+            }
+            if (newInt > 20)
+            {
+                Console.WriteLine("its cozy & warm");
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}

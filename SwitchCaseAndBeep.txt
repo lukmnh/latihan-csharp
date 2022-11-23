@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter your age");
+            string age = Console.ReadLine(); //<- to input age
+            //parse the string to int
+            int yourAge = int.Parse(age);
+
+            //switch condition
+            switch (yourAge)
+            {
+                case 15:
+                    Console.WriteLine("too young to be GIGOLO!!");
+                    break;
+                case 25:
+                    Console.WriteLine("Good, you're hired");
+                    break;
+                default:
+                    Console.WriteLine("How old are you then?");
+                    Console.WriteLine("Oh, youre " + age + " years old");
+                    break;
+            }
+
+            //If Condition
+            if (yourAge == 15)
+            {
+                Console.WriteLine("too young to be GIGOLO");
+            }
+            else if (yourAge == 25)
+            {
+                Console.WriteLine("Good, Youre hired");
+            }
+            else
+            {
+                Console.WriteLine("How old are you then ?");
+                Console.Beep(800, 500);
+                Console.WriteLine("Oh you are " + yourAge + " years old");
+            }
+
+
+            string username = "Dennis";
+
+            switch (username)
+
+            {
+                case "Dennis":
+                    Console.WriteLine("username is Dennis");
+                    break;
+                case "root":
+                    Console.WriteLine("username is root");
+                    break;
+                default:
+                    Console.WriteLine("username is unknown");
+                    break;
+            }
+
+            Console.Read();
+        }
+    }
+}
