@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    class OOP
+    {
+        static void Main(string[] args)
+        {
+            // buat object dari class
+            // an instance of Human
+            Human Lukman = new Human();
+            //access public variable from outside this file
+            Lukman.firstName = "Lukman";
+            Lukman.lastName = "Hakim";
+            //call method of class from class Human
+            Lukman.introduceMySelf();
+
+            Human michael = new Human();
+            michael.firstName = "Michael";
+            michael.lastName = "Azair";
+            michael.introduceMySelf();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    internal class Human
+    {
+        //member variable
+        public string firstName;
+        public string lastName;
+
+        //member method
+        public void introduceMySelf()
+        {
+            Console.WriteLine("Hello, My first name is {0} {1}", firstName, lastName);
+        }
+    }
+}

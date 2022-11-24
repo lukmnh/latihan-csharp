@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //made break using for loop 
+            /*for (int hitung = 0; hitung < 10; hitung++)
+            {
+                //print the loop
+                Console.WriteLine(hitung);
+                //condition to break and finish not count till maximum looping
+                if (hitung == 7)
+                {
+                    Console.WriteLine("at 7 we stop");
+                    break;
+                }
+            }*/
+
+            //made continue using for loop
+            for (int hitung = 0; hitung < 10; hitung++)
+            {
+                if (hitung % 2 == 0)
+                {
+                    Console.WriteLine("odd number");
+                    continue;
+                }
+                Console.WriteLine(hitung);
+            }
+
+            Console.Read();
+        }
+    }
+}

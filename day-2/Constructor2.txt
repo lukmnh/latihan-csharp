@@ -1,0 +1,108 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    class OOP
+    {
+        static void Main(string[] args)
+        {
+            // buat object dari class
+            // an instance of Human
+            //this called constructor from Human class
+            Human Lukman = new Human("Lukman", "Hakim", "Blue", 22);
+            //called method from class named introduceMySelf
+            Lukman.introduceMySelf();
+
+            Human michael = new Human("Mikel", "Azair", "Brown");
+            michael.introduceMySelf();
+
+            Human mira = new Human("Mira", "Slutty");
+            mira.introduceMySelf();
+
+            Human handsome = new Human("Handsome");
+            handsome.introduceMySelf();
+
+            Human newBasic = new Human();
+            newBasic.introduceMySelf();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+//Human class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    internal class Human
+    {
+        //member variable
+        private string firstName;
+        private string lastName;
+        private string eyeColor;
+        private int age;
+
+        // create constructor
+
+        // default construct
+        public Human()
+        {
+            Console.WriteLine("Constructor called. OOP");
+        }
+
+        // parameter constructor
+        public Human(string myFirstName)
+        {
+            firstName = myFirstName;
+        }
+
+        public Human(string myFirstName, string lastName)
+        {
+            firstName = myFirstName;
+            this.lastName = lastName;
+
+        }
+
+        public Human(string myFirstName, string lastName, string eyeColor)
+        {
+            firstName = myFirstName;
+            this.lastName = lastName;
+            this.eyeColor = eyeColor;
+        }
+        public Human(string myFirstName, string lastName, string eyeColor, int age)
+        {
+            //can use like this
+            firstName = myFirstName;
+            //or using this.
+            this.lastName = lastName;
+            this.eyeColor = eyeColor;
+            this.age = age;
+        }
+
+        //member method
+        public void introduceMySelf()
+        {
+            if (age != 0 && eyeColor != null && lastName != null && firstName != null)
+                Console.WriteLine("Hello, My name is {0} {1}. The color of my eye is {2} " +
+                    "and i'm {3} years old", firstName, lastName, eyeColor, age);
+            else if (firstName != null && lastName != null && eyeColor != null)
+                Console.WriteLine("Hello, My name is {0} {1}. " +
+                    "The color of my eye is {2}", firstName, lastName, eyeColor);
+            else if (firstName != null && lastName != null)
+                Console.WriteLine("Hello, My name is {0} {1}", firstName, lastName);
+            else
+                Console.WriteLine("Hello, My first name is {0}", firstName);
+        }
+    }
+}

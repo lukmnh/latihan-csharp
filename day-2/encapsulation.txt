@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    class OOP
+    {
+        static void Main(string[] args)
+        {
+            Kotak newKotak = new Kotak();
+
+            //newKotak.length = 4;
+            newKotak.setLength(8);
+            newKotak.height = 5;
+            newKotak.width = 6;
+            Console.WriteLine("Panjang kotak adalah " + newKotak.getLength());
+            newKotak.displayInfo();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+//class Kotak
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    internal class Kotak
+    {
+        //member variable
+        private int length = 3;
+        public int height;
+        public int width;
+        public int volume;
+
+        public void setLength(int length)
+        {
+            this.length = length;
+        }
+
+        public int getLength()
+        {
+            return length;
+        }
+
+        public void displayInfo()
+        {
+            Console.WriteLine("Panjangnya adalah {0} and tingginya adalah {1} " +
+                "and lebarnya adalah {2} " +
+                "and volumenya adalah {3}", length, height, width, volume = length * height * width);
+        }
+
+
+    }
+}

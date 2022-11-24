@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    class OOP
+    {
+        static void Main(string[] args)
+        {
+            Kotak newKotak = new Kotak(4, 4, 5);
+
+            //newKotak.length = 4;
+            // newKotak.setLength(8);
+            //newKotak.Height = -5;
+            //newKotak.Width = 6;
+            Console.WriteLine("Lebar kotak adalah " + newKotak.Width);
+            Console.WriteLine("Volume kotak adalah " + newKotak.Volume);
+            newKotak.displayInfo();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+//class of Kotak
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjectOrientedProgramming
+{
+    class OOP
+    {
+        static void Main(string[] args)
+        {
+            Kotak newKotak = new Kotak(4, 4, 5);
+
+            //newKotak.length = 4;
+            // newKotak.setLength(8);
+            //newKotak.Height = -5;
+            //newKotak.Width = 6;
+            Console.WriteLine("Lebar kotak adalah " + newKotak.Width);
+            Console.WriteLine("Volume kotak adalah " + newKotak.Volume);
+            newKotak.displayInfo();
+
+            Console.ReadKey();
+        }
+    }
+}
